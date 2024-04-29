@@ -21,6 +21,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         .then(data => {
             // JSON 응답에서 accessToken을 추출합니다.
             const accessToken = data.accessToken;
+            console.log(accessToken); // 삭제
             // accessToken을 사용하여 'posts' 엔드포인트에 GET 요청을 보냅니다.
             fetch('http://localhost:4000/posts', {
                 headers: {
